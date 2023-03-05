@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.2 (last updated 23.12.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter";
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+  text-decoration: none;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+pre {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: "";
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+::marker {
+  content: none;
+}
+
+.sr-only {
+  display: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.container {
+  padding: 0rem 1.5rem;
+}
+
+.callIcon {
+  background: #1A15FF url("../Assets/phone.svg") no-repeat center;
+  width: 30px;
+  height: 30px;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EEEDFF;
+  padding: 0.5rem 1rem;
+}
+.header .navigation {
+  display: flex;
+  gap: 2rem;
+}
+.header .navigation > * {
+  font-weight: 500;
+  color: #0E0C63;
+}
+.header .navigation a:hover {
+  color: #1A15FF;
+}
+.header .cta_Wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.header .cta_Wrapper > * {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+}
+.header .cta_Wrapper button {
+  border: 1px solid #E4E3FF;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  color: #1A15FF;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0px 6px 16px rgba(26, 21, 255, 0.1);
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.header .cta_Wrapper button:hover {
+  box-shadow: unset;
+}
+.header .cta_Wrapper .user_Holder {
+  background-color: #FFEFEF;
+}/*# sourceMappingURL=style.css.map */

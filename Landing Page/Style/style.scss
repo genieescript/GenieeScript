@@ -4,56 +4,70 @@ $primary-color: #1A15FF;
 $secondry-color: #FF1515;
 $text-color: #0E0C63;
 
-.d-none{
+.d-none {
     display: none;
 }
-.fl{
+
+.fl {
     float: left;
 }
-.fr{
+
+.fr {
     float: right;
 }
-.w100{
+
+.w100 {
     width: 100%;
 }
-.container{
-    padding: 0rem 1.5rem;
+
+.container {
+    // padding: 0rem 1.5rem;
+    max-width: 80%;
+    margin: 0 auto;
 }
-.callIcon{
+
+.callIcon {
     background: $primary-color url('../Assets/phone.svg') no-repeat center;
     width: 30px;
     height: 30px;
     border-radius: 0.5rem;
     margin-right: 0.5rem;
 }
-.header{
+
+.header {
     display: flex;
     background-color: #fff;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #EEEDFF;
     padding: 0.5rem 1rem;
-    .navigation{
+
+    .navigation {
         display: flex;
         gap: 2rem;
-        >*{
+
+        >* {
             // font-size: 1.1rem;
             font-weight: 500;
             color: #0E0C63;
         }
-        a:hover{
+
+        a:hover {
             color: $primary-color;
         }
     }
-    .cta_Wrapper{
+
+    .cta_Wrapper {
         display: flex;
         gap: 1rem;
-        >*{            
+
+        >* {
             border-radius: 0.5rem;
             cursor: pointer;
             padding: 0.5rem 1.2rem;
         }
-        button{
+
+        button {
             border: 1px solid #E4E3FF;
             background-color: transparent;
             border-radius: 0.5rem;
@@ -64,12 +78,163 @@ $text-color: #0E0C63;
             display: flex;
             align-items: center;
             transition: 0.5s;
-            &:hover{
+
+            &:hover {
                 box-shadow: unset;
             }
         }
-        .user_Holder{
+
+        .user_Holder {
             background-color: #FFEFEF;
         }
+    }
+}
+
+.genieeImg {
+    background: transparent url('../Assets/geniee.svg') no-repeat center;
+    background-size: cover;
+    width: 500px;
+    height: 730px;
+}
+
+.icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent url('') no-repeat center;
+    background-size: contain;
+    float: left;
+    margin-right: 0.5rem;
+    border-radius: 0.3rem;
+    background-size: 15px;
+
+    &_waveHand {
+        background-image: url('../Assets/wave-hand.svg');
+        background-size: contain;
+    }
+
+    &_subscribe {
+        background-image: url('../Assets/bell.svg');
+        background-color: $primary-color;
+    }
+}
+
+.cta_Wrapper {
+    button {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.btn {
+    background-color: #fff;
+    border: 1px solid #E4E3FF;
+    box-shadow: 0px 6px 16px rgba(26, 21, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    padding-left: 0.6rem;
+    font-size: 22px;
+    font-weight: 600;
+    color: $primary-color;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.heroBox {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &-header {
+            font-size: 0.8rem;
+            color: #6D6D88;
+
+            h2 {
+                font-weight: 500;
+                display: flex;
+                gap: 0.5rem;
+            }
+        }
+
+        &-title {
+            font-size: 4rem;
+            line-height: 150%;
+            color: $text-color;
+
+            .geniee {
+                color: $primary-color;
+            }
+
+            .script {
+                color: $secondry-color;
+            }
+        }
+    }
+
+    &_right {
+        position: relative;
+
+        .animatedIcon {
+            width: 50px;
+            height: 50px;
+            background: transparent url('') no-repeat center;
+            background-size: contain;
+            position: absolute;
+
+            &_1 {
+                background-image: url('../Assets/html.svg');
+                top: 3rem;
+                left: 4rem;
+                animation: up-down 2s ease-in-out infinite;
+            }
+
+            &_2 {
+                background-image: url('../Assets/js.svg');
+                top: -2rem;
+                left: 8rem;
+                animation: up-down 2s ease-in-out infinite;
+
+            }
+
+            &_3 {
+                background-image: url('../Assets/react.svg');
+                top: 0rem;
+                animation: up-down 2s ease-in-out infinite;
+
+                left: 18rem;
+            }
+
+            &_4 {
+                background-image: url('../Assets/css.svg');
+                top: 5rem;
+                left: 21rem;
+                animation: up-down 2s ease-in-out infinite;
+
+            }
+        }
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    5% {
+        transform: translate(-50%, -70%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
     }
 }

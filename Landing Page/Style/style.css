@@ -134,7 +134,8 @@ h1, h2, h3, h4, p {
 }
 
 .container {
-  padding: 0rem 1.5rem;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .callIcon {
@@ -190,4 +191,132 @@ h1, h2, h3, h4, p {
 }
 .header .cta_Wrapper .user_Holder {
   background-color: #FFEFEF;
+}
+
+.genieeImg {
+  background: transparent url("../Assets/geniee.svg") no-repeat center;
+  background-size: cover;
+  width: 500px;
+  height: 730px;
+}
+
+.icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent url("") no-repeat center;
+  background-size: contain;
+  float: left;
+  margin-right: 0.5rem;
+  border-radius: 0.3rem;
+  background-size: 15px;
+}
+.icon_waveHand {
+  background-image: url("../Assets/wave-hand.svg");
+  background-size: contain;
+}
+.icon_subscribe {
+  background-image: url("../Assets/bell.svg");
+  background-color: #1A15FF;
+}
+
+.cta_Wrapper button {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #fff;
+  border: 1px solid #E4E3FF;
+  box-shadow: 0px 6px 16px rgba(26, 21, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  padding-left: 0.6rem;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1A15FF;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  box-shadow: none;
+}
+
+.heroBox {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.heroBox_left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.heroBox_left-header {
+  font-size: 0.8rem;
+  color: #6D6D88;
+}
+.heroBox_left-header h2 {
+  font-weight: 500;
+  display: flex;
+  gap: 0.5rem;
+}
+.heroBox_left-title {
+  font-size: 4rem;
+  line-height: 150%;
+  color: #0E0C63;
+}
+.heroBox_left-title .geniee {
+  color: #1A15FF;
+}
+.heroBox_left-title .script {
+  color: #FF1515;
+}
+.heroBox_right {
+  position: relative;
+}
+.heroBox_right .animatedIcon {
+  width: 50px;
+  height: 50px;
+  background: transparent url("") no-repeat center;
+  background-size: contain;
+  position: absolute;
+}
+.heroBox_right .animatedIcon_1 {
+  background-image: url("../Assets/html.svg");
+  top: 3rem;
+  left: 4rem;
+  animation: up-down 2s ease-in-out infinite;
+}
+.heroBox_right .animatedIcon_2 {
+  background-image: url("../Assets/js.svg");
+  top: -2rem;
+  left: 8rem;
+  animation: up-down 2s ease-in-out infinite;
+}
+.heroBox_right .animatedIcon_3 {
+  background-image: url("../Assets/react.svg");
+  top: 0rem;
+  animation: up-down 2s ease-in-out infinite;
+  left: 18rem;
+}
+.heroBox_right .animatedIcon_4 {
+  background-image: url("../Assets/css.svg");
+  top: 5rem;
+  left: 21rem;
+  animation: up-down 2s ease-in-out infinite;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  5% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }/*# sourceMappingURL=style.css.map */
